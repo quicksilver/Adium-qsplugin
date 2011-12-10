@@ -1,0 +1,9 @@
+//
+// Prefix header for all source files of the 'QSAdium' target in the 'QSAdium' project
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+	#import <QSCore/QSObject.h>
+#import "Adium.h"
+#endif

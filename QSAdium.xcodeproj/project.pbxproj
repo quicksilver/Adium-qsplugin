@@ -1,0 +1,299 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D4FC0DF114929F8000972AF8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FC0DF014929F8000972AF8 /* Cocoa.framework */; };
+		D4FC0DF314929F8000972AF8 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FC0DF214929F8000972AF8 /* ScriptingBridge.framework */; };
+		D4FC0E241492A28900972AF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4FC0E201492A28900972AF8 /* InfoPlist.strings */; };
+		D4FC0E251492A28900972AF8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4FC0E221492A28900972AF8 /* Info.plist */; };
+		D4FC0E2A1492A2A500972AF8 /* QSAdiumAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FC0E271492A2A500972AF8 /* QSAdiumAction.m */; };
+		D4FC0E2B1492A2A500972AF8 /* QSAdiumSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FC0E291492A2A500972AF8 /* QSAdiumSource.m */; };
+		D4FC0E421492A45A00972AF8 /* Adium.app in Sources */ = {isa = PBXBuildFile; fileRef = D4FC0E401492A45500972AF8 /* Adium.app */; };
+		D4FC0EA81492A97800972AF8 /* Adium.app in Resources */ = {isa = PBXBuildFile; fileRef = D4FC0E401492A45500972AF8 /* Adium.app */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		D4FC0E431492A47500972AF8 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "*.app";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				"$(DERIVED_FILES_DIR)/$(INPUT_FILE_BASE).h",
+			);
+			script = "sdef \"$INPUT_FILE_PATH\" | sdp -fh -o \"$DERIVED_FILES_DIR\" --basename \"$INPUT_FILE_BASE\" --bundleid `defaults read \"$INPUT_FILE_PATH/Contents/Info\" CFBundleIdentifier`";
+		};
+/* End PBXBuildRule section */
+
+/* Begin PBXFileReference section */
+		D4FC0DF014929F8000972AF8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		D4FC0DF214929F8000972AF8 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
+		D4FC0E211492A28900972AF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
+		D4FC0E221492A28900972AF8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		D4FC0E231492A28900972AF8 /* QSAdium-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QSAdium-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		D4FC0E261492A2A500972AF8 /* QSAdiumAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSAdiumAction.h; sourceTree = SOURCE_ROOT; };
+		D4FC0E271492A2A500972AF8 /* QSAdiumAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSAdiumAction.m; sourceTree = SOURCE_ROOT; };
+		D4FC0E281492A2A500972AF8 /* QSAdiumSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSAdiumSource.h; sourceTree = SOURCE_ROOT; };
+		D4FC0E291492A2A500972AF8 /* QSAdiumSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSAdiumSource.m; sourceTree = SOURCE_ROOT; };
+		D4FC0E301492A40000972AF8 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
+		D4FC0E311492A40000972AF8 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		D4FC0E321492A40000972AF8 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
+		D4FC0E331492A40000972AF8 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
+		D4FC0E341492A40000972AF8 /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
+		D4FC0E351492A40000972AF8 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		D4FC0E361492A40000972AF8 /* Quicksilver.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quicksilver.pch; sourceTree = "<group>"; };
+		D4FC0E371492A40000972AF8 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		D4FC0E401492A45500972AF8 /* Adium.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Adium.app; path = "/Users/rob/Coding/Quicksilver/Plug-ins/QSAdium/../../../../../../Applications/Adium.app"; sourceTree = "<absolute>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4FC0DEC14929F8000972AF8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4FC0DF114929F8000972AF8 /* Cocoa.framework in Frameworks */,
+				D4FC0DF314929F8000972AF8 /* ScriptingBridge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4FC0DE414929F8000972AF8 = {
+			isa = PBXGroup;
+			children = (
+				D4FC0E261492A2A500972AF8 /* QSAdiumAction.h */,
+				D4FC0E271492A2A500972AF8 /* QSAdiumAction.m */,
+				D4FC0E281492A2A500972AF8 /* QSAdiumSource.h */,
+				D4FC0E291492A2A500972AF8 /* QSAdiumSource.m */,
+				D4FC0E221492A28900972AF8 /* Info.plist */,
+				D4FC0E2F1492A40000972AF8 /* Configuration */,
+				D4FC0DF614929F8000972AF8 /* Supporting Files */,
+				D4FC0DEF14929F8000972AF8 /* Frameworks */,
+				D4FC0E981492A87A00972AF8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D4FC0DEF14929F8000972AF8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D4FC0DF014929F8000972AF8 /* Cocoa.framework */,
+				D4FC0DF214929F8000972AF8 /* ScriptingBridge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4FC0DF614929F8000972AF8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4FC0E401492A45500972AF8 /* Adium.app */,
+				D4FC0E201492A28900972AF8 /* InfoPlist.strings */,
+				D4FC0E231492A28900972AF8 /* QSAdium-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			path = QSAdium;
+			sourceTree = "<group>";
+		};
+		D4FC0E2F1492A40000972AF8 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				D4FC0E301492A40000972AF8 /* Common.xcconfig */,
+				D4FC0E311492A40000972AF8 /* Debug.xcconfig */,
+				D4FC0E321492A40000972AF8 /* Developer.xcconfig */,
+				D4FC0E331492A40000972AF8 /* QSPlugIn.xcconfig */,
+				D4FC0E341492A40000972AF8 /* QSPlugIn_Debug.xcconfig */,
+				D4FC0E351492A40000972AF8 /* QSPlugIn_Release.xcconfig */,
+				D4FC0E361492A40000972AF8 /* Quicksilver.pch */,
+				D4FC0E371492A40000972AF8 /* Release.xcconfig */,
+			);
+			name = Configuration;
+			path = ../../../../../../private/tmp/QS/Configuration;
+			sourceTree = "<group>";
+		};
+		D4FC0E981492A87A00972AF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4FC0DEE14929F8000972AF8 /* Adium Module */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4FC0E0514929F8000972AF8 /* Build configuration list for PBXNativeTarget "Adium Module" */;
+			buildPhases = (
+				D4FC0DEB14929F8000972AF8 /* Sources */,
+				D4FC0DEC14929F8000972AF8 /* Frameworks */,
+				D4FC0DED14929F8000972AF8 /* Resources */,
+				D44D7C2514931484002EA077 /* ShellScript */,
+			);
+			buildRules = (
+				D4FC0E431492A47500972AF8 /* PBXBuildRule */,
+			);
+			dependencies = (
+			);
+			name = "Adium Module";
+			productName = QSAdium;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4FC0DE614929F8000972AF8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = D4FC0DE914929F8000972AF8 /* Build configuration list for PBXProject "QSAdium" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D4FC0DE414929F8000972AF8;
+			productRefGroup = D4FC0E981492A87A00972AF8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4FC0DEE14929F8000972AF8 /* Adium Module */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4FC0DED14929F8000972AF8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4FC0E241492A28900972AF8 /* InfoPlist.strings in Resources */,
+				D4FC0E251492A28900972AF8 /* Info.plist in Resources */,
+				D4FC0EA81492A97800972AF8 /* Adium.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D44D7C2514931484002EA077 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "$SRCROOT/bltrversion $INFOPLIST_FILE";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4FC0DEB14929F8000972AF8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4FC0E421492A45A00972AF8 /* Adium.app in Sources */,
+				D4FC0E2A1492A2A500972AF8 /* QSAdiumAction.m in Sources */,
+				D4FC0E2B1492A2A500972AF8 /* QSAdiumSource.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D4FC0E201492A28900972AF8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4FC0E211492A28900972AF8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4FC0E0314929F8000972AF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4FC0E311492A40000972AF8 /* Debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+			};
+			name = Debug;
+		};
+		D4FC0E0414929F8000972AF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4FC0E371492A40000972AF8 /* Release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+			};
+			name = Release;
+		};
+		D4FC0E0614929F8000972AF8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4FC0E341492A40000972AF8 /* QSPlugIn_Debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QSAdium-Prefix.pch";
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = qsplugin;
+			};
+			name = Debug;
+		};
+		D4FC0E0714929F8000972AF8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4FC0E351492A40000972AF8 /* QSPlugIn_Release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QSAdium-Prefix.pch";
+				INFOPLIST_FILE = Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = qsplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4FC0DE914929F8000972AF8 /* Build configuration list for PBXProject "QSAdium" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4FC0E0314929F8000972AF8 /* Debug */,
+				D4FC0E0414929F8000972AF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4FC0E0514929F8000972AF8 /* Build configuration list for PBXNativeTarget "Adium Module" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4FC0E0614929F8000972AF8 /* Debug */,
+				D4FC0E0714929F8000972AF8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4FC0DE614929F8000972AF8 /* Project object */;
+}
