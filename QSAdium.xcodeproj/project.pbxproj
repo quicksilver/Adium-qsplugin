@@ -10,11 +10,9 @@
 		D4FC0DF114929F8000972AF8 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FC0DF014929F8000972AF8 /* Cocoa.framework */; };
 		D4FC0DF314929F8000972AF8 /* ScriptingBridge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4FC0DF214929F8000972AF8 /* ScriptingBridge.framework */; };
 		D4FC0E241492A28900972AF8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D4FC0E201492A28900972AF8 /* InfoPlist.strings */; };
-		D4FC0E251492A28900972AF8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4FC0E221492A28900972AF8 /* Info.plist */; };
 		D4FC0E2A1492A2A500972AF8 /* QSAdiumAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FC0E271492A2A500972AF8 /* QSAdiumAction.m */; };
 		D4FC0E2B1492A2A500972AF8 /* QSAdiumSource.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FC0E291492A2A500972AF8 /* QSAdiumSource.m */; };
 		D4FC0E421492A45A00972AF8 /* Adium.app in Sources */ = {isa = PBXBuildFile; fileRef = D4FC0E401492A45500972AF8 /* Adium.app */; };
-		D4FC0EA81492A97800972AF8 /* Adium.app in Resources */ = {isa = PBXBuildFile; fileRef = D4FC0E401492A45500972AF8 /* Adium.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -32,6 +30,7 @@
 /* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
+		D44D7C2C149319BE002EA077 /* QSAdiumDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSAdiumDefines.h; sourceTree = "<group>"; };
 		D4FC0DF014929F8000972AF8 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D4FC0DF214929F8000972AF8 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 		D4FC0E211492A28900972AF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
@@ -49,7 +48,7 @@
 		D4FC0E351492A40000972AF8 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
 		D4FC0E361492A40000972AF8 /* Quicksilver.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quicksilver.pch; sourceTree = "<group>"; };
 		D4FC0E371492A40000972AF8 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
-		D4FC0E401492A45500972AF8 /* Adium.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Adium.app; path = "/Users/rob/Coding/Quicksilver/Plug-ins/QSAdium/../../../../../../Applications/Adium.app"; sourceTree = "<absolute>"; };
+		D4FC0E401492A45500972AF8 /* Adium.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Adium.app; path = "/Users/rob/Coding/Quicksilver/Plug-ins/Adium/../../../../../../Applications/Adium.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +67,7 @@
 		D4FC0DE414929F8000972AF8 = {
 			isa = PBXGroup;
 			children = (
+				D44D7C2C149319BE002EA077 /* QSAdiumDefines.h */,
 				D4FC0E261492A2A500972AF8 /* QSAdiumAction.h */,
 				D4FC0E271492A2A500972AF8 /* QSAdiumAction.m */,
 				D4FC0E281492A2A500972AF8 /* QSAdiumSource.h */,
@@ -133,7 +133,7 @@
 				D4FC0DEB14929F8000972AF8 /* Sources */,
 				D4FC0DEC14929F8000972AF8 /* Frameworks */,
 				D4FC0DED14929F8000972AF8 /* Resources */,
-				D44D7C2514931484002EA077 /* ShellScript */,
+				D44D7C3614931F80002EA077 /* ShellScript */,
 			);
 			buildRules = (
 				D4FC0E431492A47500972AF8 /* PBXBuildRule */,
@@ -175,15 +175,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4FC0E241492A28900972AF8 /* InfoPlist.strings in Resources */,
-				D4FC0E251492A28900972AF8 /* Info.plist in Resources */,
-				D4FC0EA81492A97800972AF8 /* Adium.app in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		D44D7C2514931484002EA077 /* ShellScript */ = {
+		D44D7C3614931F80002EA077 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 8;
 			files = (

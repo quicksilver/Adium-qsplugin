@@ -6,6 +6,7 @@
 //
 
 #import <QSCore/QSObjectSource.h>
+#import "QSAdiumDefines.h"
 
 #define QSAdiumType @"QSAdiumType"
 

@@ -6,6 +6,7 @@
 //
 
 #import <QSCore/QSActionProvider.h>
+#import "QSAdiumDefines.h"
 
 #define kQSAdiumAction @"QSAdiumAction"
 
