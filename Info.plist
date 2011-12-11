@@ -60,12 +60,14 @@
 		</dict>
 		<key>QSBundleChildHandlers</key>
 		<dict>
-			<key>QSAdiumType</key>
+			<key>com.adiumX.adiumX</key>
 			<string>QSAdiumSource</string>
 		</dict>
 		<key>QSObjectHandlers</key>
 		<dict>
-			<key>QSAdiumType</key>
+			<key>com.adiumX.adiumX.account</key>
+			<string>QSAdiumSource</string>
+			<key>com.adiumX.adiumX.contact</key>
 			<string>QSAdiumSource</string>
 		</dict>
 		<key>QSObjectSources</key>
@@ -73,7 +75,7 @@
 			<key>QSAdiumSource</key>
 			<string>QSAdiumSource</string>
 		</dict>
-		<key>QSPreferencePanes</key>
+		<key>QSPreferencePanesTemplate</key>
 		<dict>
 			<key>QSAdiumPrefPaneTemplate</key>
 			<dict>

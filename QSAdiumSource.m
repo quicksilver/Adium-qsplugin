@@ -54,6 +54,32 @@
 
 // Object Handler Methods
 
+- (BOOL)loadChildrenForObject:(QSObject *)object
+{
+	NSMutableArray *children = [NSMutableArray arrayWithCapacity:1];
+	QSObject *child;
+	// list all accounts
+//	for (AdiumAccount *account in [Adium accounts]) {
+//		child = [QSObject objectWithName:[account name]];
+//		[child setDetails:[[account service] name]];
+//		[child setIcon:[[account service] image]];
+//		[child setPrimaryType:kQSAdiumAccountType];
+//		[children addObject:child];
+//	}
+	// list on-line contacts
+	NSPredicate *onlineFilter = [NSPredicate predicateWithFormat:@"statusType == %i", AdiumStatusTypesAvailable];
+	NSArray *onlineContacts = [[[Adium contacts] get] filteredArrayUsingPredicate:onlineFilter];
+	for (AdiumContact *contact in onlineContacts) {
+		child = [QSObject objectWithName:[contact displayName]];
+		//[child setDetails:[contact statusMessage]];
+		[child setIcon:[contact image]];
+		[child setPrimaryType:kQSAdiumContactType];
+		[children addObject:child];
+	}
+	[object setChildren:children];
+	return YES;
+}
+
 /*
 - (void)setQuickIconForObject:(QSObject *)object
 {
