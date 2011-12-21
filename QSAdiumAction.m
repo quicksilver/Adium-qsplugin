@@ -106,6 +106,9 @@
 			[chats addObject:object];
 		}
 		return chats;
+	} else if ([action isEqualToString:@"QSAdiumSendMessage"]) {
+		// empty pane in text entry mode
+		return [NSArray arrayWithObject:[QSObject textProxyObjectWithDefaultValue:@""]];
 	} else if ([action isEqualToString:@"QSAdiumSetStatusTo"]) {
 		NSMutableArray *statusObjects = [NSMutableArray arrayWithCapacity:1];
 		QSObject *object;

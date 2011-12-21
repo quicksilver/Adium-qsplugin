@@ -19,9 +19,32 @@
 	<key>CFBundleShortVersionString</key>
 	<string>2.0</string>
 	<key>CFBundleVersion</key>
-	<string>284</string>
+	<string>285</string>
 	<key>QSActions</key>
 	<dict>
+		<key>QSAdiumSendMessage</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSAdiumAction</string>
+			<key>actionSelector</key>
+			<string>sendMessage:to:</string>
+			<key>directTypes</key>
+			<array>
+				<string>com.adiumX.adiumX.chat</string>
+			</array>
+			<key>icon</key>
+			<string>AlertNoteIcon</string>
+			<key>indirectOptional</key>
+			<false/>
+			<key>indirectTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>name</key>
+			<string>Send Instant Message…</string>
+			<key>reverseArguments</key>
+			<true/>
+		</dict>
 		<key>QSAdiumSendMessageTo</key>
 		<dict>
 			<key>actionClass</key>
@@ -42,7 +65,7 @@
 				<string>com.adiumX.adiumX.chat</string>
 			</array>
 			<key>name</key>
-			<string>Sent Instant Message to…</string>
+			<string>Send Instant Message to…</string>
 		</dict>
 	</dict>
 	<key>QSPlugIn</key>
