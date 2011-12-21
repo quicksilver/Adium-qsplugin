@@ -11,3 +11,6 @@
 
 #define kQSAdiumAccountType @"com.adiumX.adiumX.account"
 #define kQSAdiumContactType @"com.adiumX.adiumX.contact"
+#define kQSAdiumStatusType @"com.adiumX.adiumX.status"
+#define kQSAdiumChatType @"com.adiumX.adiumX.chat"
+#define kQSAdiumBrowserType @"QSAdiumBroswer"
