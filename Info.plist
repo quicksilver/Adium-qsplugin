@@ -19,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>2.0</string>
 	<key>CFBundleVersion</key>
-	<string>283</string>
+	<string>284</string>
 	<key>QSActions</key>
 	<dict>
 		<key>QSAdiumSendMessageTo</key>
@@ -33,12 +33,13 @@
 				<string>NSStringPboardType</string>
 			</array>
 			<key>icon</key>
-			<string>ToolbarAdvanced</string>
+			<string>AlertNoteIcon</string>
 			<key>indirectOptional</key>
 			<false/>
 			<key>indirectTypes</key>
 			<array>
 				<string>com.adiumX.adiumX.contact</string>
+				<string>com.adiumX.adiumX.chat</string>
 			</array>
 			<key>name</key>
 			<string>Sent Instant Message to…</string>
