@@ -19,21 +19,30 @@
 	<key>CFBundleShortVersionString</key>
 	<string>2.0</string>
 	<key>CFBundleVersion</key>
-	<string>27F</string>
-	<key>NSPrincipalClass</key>
-	<string>QSAdiumSource</string>
+	<string>283</string>
 	<key>QSActions</key>
 	<dict>
-		<key>actionClass</key>
-		<string>QSAdiumActionProvider</string>
-		<key>actionSelector</key>
-		<string>performActionOnObject:</string>
-		<key>directTypes</key>
-		<array>
-			<string>QSAdiumType</string>
-		</array>
-		<key>icon</key>
-		<string>ToolbarAdvanced</string>
+		<key>QSAdiumSendMessageTo</key>
+		<dict>
+			<key>actionClass</key>
+			<string>QSAdiumAction</string>
+			<key>actionSelector</key>
+			<string>sendMessage:to:</string>
+			<key>directTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>icon</key>
+			<string>ToolbarAdvanced</string>
+			<key>indirectOptional</key>
+			<false/>
+			<key>indirectTypes</key>
+			<array>
+				<string>com.adiumX.adiumX.contact</string>
+			</array>
+			<key>name</key>
+			<string>Sent Instant Message to…</string>
+		</dict>
 	</dict>
 	<key>QSPlugIn</key>
 	<dict>
@@ -45,18 +54,47 @@
 			<string>Communication</string>
 		</array>
 		<key>description</key>
-		<string>One-line summary for this plug-in</string>
+		<string>Browse Adium contacts and send messages</string>
 		<key>extendedDescription</key>
 		<string>HTML formatted documentation for this plug-in.</string>
 		<key>icon</key>
-		<string>KEXT</string>
+		<string>com.adiumX.adiumX</string>
 	</dict>
 	<key>QSRegistration</key>
 	<dict>
 		<key>QSActionProviders</key>
 		<dict>
-			<key>QSAdiumActionProvider</key>
-			<string>QSAdiumActionProvider</string>
+			<key>QSAdiumAction</key>
+			<string>QSAdiumAction</string>
+		</dict>
+		<key>QSApplicationActions</key>
+		<dict>
+			<key>com.adiumX.adiumX</key>
+			<dict>
+				<key>QSAdiumSetStatusTo</key>
+				<dict>
+					<key>actionClass</key>
+					<string>QSAdiumAction</string>
+					<key>actionSelector</key>
+					<string>setStatus:to:</string>
+					<key>argumentCount</key>
+					<integer>2</integer>
+					<key>directTypes</key>
+					<array>
+						<string>NSFileNamesPboardType</string>
+					</array>
+					<key>icon</key>
+					<string>AdiumContactsIcon</string>
+					<key>indirectOptional</key>
+					<false/>
+					<key>indirectTypes</key>
+					<array>
+						<string>com.adiumX.adiumX.status</string>
+					</array>
+					<key>name</key>
+					<string>Set Status to…</string>
+				</dict>
+			</dict>
 		</dict>
 		<key>QSBundleChildHandlers</key>
 		<dict>
@@ -65,6 +103,8 @@
 		</dict>
 		<key>QSObjectHandlers</key>
 		<dict>
+			<key>QSAdiumBroswer</key>
+			<string>QSAdiumSource</string>
 			<key>com.adiumX.adiumX.account</key>
 			<string>QSAdiumSource</string>
 			<key>com.adiumX.adiumX.contact</key>
@@ -107,13 +147,79 @@
 		</dict>
 		<key>QSTypeDefinitions</key>
 		<dict>
-			<key>QSAdiumType</key>
+			<key>com.adiumX.adiumX.account</key>
 			<dict>
 				<key>icon</key>
 				<string>GenericDocumentIcon</string>
 				<key>name</key>
-				<string>QSAdium Object</string>
+				<string>Adium Account</string>
 			</dict>
+			<key>com.adiumX.adiumX.contact</key>
+			<dict>
+				<key>icon</key>
+				<string>GenericDocumentIcon</string>
+				<key>name</key>
+				<string>Adium Contact</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>QSResourceAdditions</key>
+	<dict>
+		<key>AdiumChatsIcon</key>
+		<dict>
+			<key>bundle</key>
+			<string>com.adiumX.adiumX</string>
+			<key>resource</key>
+			<string>AdiumMessageStyle.icns</string>
+		</dict>
+		<key>AdiumContactsIcon</key>
+		<dict>
+			<key>bundle</key>
+			<string>com.adiumX.adiumX</string>
+			<key>resource</key>
+			<string>AdiumStatusIcons.icns</string>
+		</dict>
+		<key>AdiumDefaultIcon</key>
+		<dict>
+			<key>bundle</key>
+			<string>com.adiumX.adiumX</string>
+			<key>resource</key>
+			<string>DefaultIcon.png</string>
+		</dict>
+		<key>AdiumServicesIcon</key>
+		<dict>
+			<key>bundle</key>
+			<string>com.adiumX.adiumX</string>
+			<key>resource</key>
+			<string>AdiumServiceIcons.icns</string>
+		</dict>
+		<key>AdiumStatusAvailable</key>
+		<dict>
+			<key>bundle</key>
+			<string>com.adiumX.adiumX</string>
+			<key>path</key>
+			<string>Contents/Resources/Dock Icons/Adiumy Green.AdiumIcon/Awake.png</string>
+		</dict>
+		<key>AdiumStatusAway</key>
+		<dict>
+			<key>bundle</key>
+			<string>com.adiumX.adiumX</string>
+			<key>path</key>
+			<string>Contents/Resources/Dock Icons/Adiumy Yellow.AdiumIcon/Asleep.png</string>
+		</dict>
+		<key>AdiumStatusHidden</key>
+		<dict>
+			<key>bundle</key>
+			<string>com.adiumX.adiumX</string>
+			<key>path</key>
+			<string>Contents/Resources/Dock Icons/Adiumy Black.AdiumIcon/Invisible.png</string>
+		</dict>
+		<key>AdiumStatusOffline</key>
+		<dict>
+			<key>bundle</key>
+			<string>com.adiumX.adiumX</string>
+			<key>path</key>
+			<string>Contents/Resources/Dock Icons/Adiumy Red.AdiumIcon/Asleep.png</string>
 		</dict>
 	</dict>
 </dict>
