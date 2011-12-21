@@ -35,19 +35,18 @@
 		D4FC0DF214929F8000972AF8 /* ScriptingBridge.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScriptingBridge.framework; path = System/Library/Frameworks/ScriptingBridge.framework; sourceTree = SDKROOT; };
 		D4FC0E211492A28900972AF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = SOURCE_ROOT; };
 		D4FC0E221492A28900972AF8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
-		D4FC0E231492A28900972AF8 /* QSAdium-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "QSAdium-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		D4FC0E261492A2A500972AF8 /* QSAdiumAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSAdiumAction.h; sourceTree = SOURCE_ROOT; };
 		D4FC0E271492A2A500972AF8 /* QSAdiumAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSAdiumAction.m; sourceTree = SOURCE_ROOT; };
 		D4FC0E281492A2A500972AF8 /* QSAdiumSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSAdiumSource.h; sourceTree = SOURCE_ROOT; };
 		D4FC0E291492A2A500972AF8 /* QSAdiumSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSAdiumSource.m; sourceTree = SOURCE_ROOT; };
-		D4FC0E301492A40000972AF8 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
-		D4FC0E311492A40000972AF8 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		D4FC0E321492A40000972AF8 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Developer.xcconfig; sourceTree = "<group>"; };
-		D4FC0E331492A40000972AF8 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn.xcconfig; sourceTree = "<group>"; };
-		D4FC0E341492A40000972AF8 /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Debug.xcconfig; sourceTree = "<group>"; };
-		D4FC0E351492A40000972AF8 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = QSPlugIn_Release.xcconfig; sourceTree = "<group>"; };
+		D4FC0E301492A40000972AF8 /* Common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Common.xcconfig; path = /private/tmp/QS/Configuration/Common.xcconfig; sourceTree = "<absolute>"; };
+		D4FC0E311492A40000972AF8 /* Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Debug.xcconfig; path = /private/tmp/QS/Configuration/Debug.xcconfig; sourceTree = "<absolute>"; };
+		D4FC0E321492A40000972AF8 /* Developer.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Developer.xcconfig; path = /private/tmp/QS/Configuration/Developer.xcconfig; sourceTree = "<absolute>"; };
+		D4FC0E331492A40000972AF8 /* QSPlugIn.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSPlugIn.xcconfig; path = /private/tmp/QS/Configuration/QSPlugIn.xcconfig; sourceTree = "<absolute>"; };
+		D4FC0E341492A40000972AF8 /* QSPlugIn_Debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSPlugIn_Debug.xcconfig; path = /private/tmp/QS/Configuration/QSPlugIn_Debug.xcconfig; sourceTree = "<absolute>"; };
+		D4FC0E351492A40000972AF8 /* QSPlugIn_Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = QSPlugIn_Release.xcconfig; path = /private/tmp/QS/Configuration/QSPlugIn_Release.xcconfig; sourceTree = "<absolute>"; };
 		D4FC0E361492A40000972AF8 /* Quicksilver.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quicksilver.pch; sourceTree = "<group>"; };
-		D4FC0E371492A40000972AF8 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		D4FC0E371492A40000972AF8 /* Release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Release.xcconfig; path = /private/tmp/QS/Configuration/Release.xcconfig; sourceTree = "<absolute>"; };
 		D4FC0E401492A45500972AF8 /* Adium.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Adium.app; path = "/Users/rob/Coding/Quicksilver/Plug-ins/Adium/../../../../../../Applications/Adium.app"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -94,7 +93,6 @@
 			children = (
 				D4FC0E401492A45500972AF8 /* Adium.app */,
 				D4FC0E201492A28900972AF8 /* InfoPlist.strings */,
-				D4FC0E231492A28900972AF8 /* QSAdium-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			path = QSAdium;
@@ -247,11 +245,8 @@
 			baseConfigurationReference = D4FC0E341492A40000972AF8 /* QSPlugIn_Debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "QSAdium-Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 				WRAPPER_EXTENSION = qsplugin;
 			};
 			name = Debug;
@@ -261,11 +256,8 @@
 			baseConfigurationReference = D4FC0E351492A40000972AF8 /* QSPlugIn_Release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "QSAdium-Prefix.pch";
 				INFOPLIST_FILE = Info.plist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 				WRAPPER_EXTENSION = qsplugin;
 			};
 			name = Release;
