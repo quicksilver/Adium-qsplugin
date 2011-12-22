@@ -19,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>2.0</string>
 	<key>CFBundleVersion</key>
-	<string>285</string>
+	<string>286</string>
 	<key>QSActions</key>
 	<dict>
 		<key>QSAdiumSendMessage</key>
@@ -42,6 +42,8 @@
 			</array>
 			<key>name</key>
 			<string>Send Instant Message…</string>
+			<key>precedence</key>
+			<real>2</real>
 			<key>reverseArguments</key>
 			<true/>
 		</dict>
@@ -153,19 +155,19 @@
 				<string>QSAdium</string>
 			</dict>
 		</dict>
-		<key>QSProxiesTemplate</key>
+		<key>QSProxies</key>
 		<dict>
-			<key>QSAdiumSomeProxy</key>
+			<key>QSAdiumActiveChat</key>
 			<dict>
 				<key>icon</key>
-				<string>GenericDocumentIcon</string>
+				<string>AdiumChatsIcon</string>
 				<key>name</key>
-				<string>QSAdium Proxy</string>
+				<string>Active Chat (Adium)</string>
 				<key>providerClass</key>
 				<string>QSAdiumSource</string>
 				<key>types</key>
 				<array>
-					<string>QSAdiumType</string>
+					<string>com.adiumX.adiumX.chat</string>
 				</array>
 			</dict>
 		</dict>

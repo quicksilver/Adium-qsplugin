@@ -111,6 +111,22 @@
 	return YES;
 }
 
+- (id)resolveProxyObject:(id)proxy
+{
+	if (![proxy isKindOfClass:[NSString class]]) {
+		proxy = [proxy identifier];
+	}
+	if ([proxy isEqualToString:@"QSAdiumActiveChat"]) {
+		AdiumChat *active = [[Adium activeChat] get];
+		QSObject *chatProxy = [QSObject objectWithName:[active name]];
+		[chatProxy setIcon:[[[active contacts] objectAtIndex:0] image]];
+		[chatProxy setObject:active forType:kQSAdiumChatType];
+		[chatProxy setPrimaryType:kQSAdiumChatType];
+		return chatProxy;
+	}
+	return nil;
+}
+
 /*
 - (void)setQuickIconForObject:(QSObject *)object
 {
