@@ -19,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>2.0</string>
 	<key>CFBundleVersion</key>
-	<string>286</string>
+	<string>287</string>
 	<key>QSActions</key>
 	<dict>
 		<key>QSAdiumSendMessage</key>
@@ -176,14 +176,21 @@
 			<key>com.adiumX.adiumX.account</key>
 			<dict>
 				<key>icon</key>
-				<string>GenericDocumentIcon</string>
+				<string>AdiumServicesIcon</string>
 				<key>name</key>
 				<string>Adium Account</string>
+			</dict>
+			<key>com.adiumX.adiumX.chat</key>
+			<dict>
+				<key>icon</key>
+				<string>AdiumChatsIcon</string>
+				<key>name</key>
+				<string>Adium Chat</string>
 			</dict>
 			<key>com.adiumX.adiumX.contact</key>
 			<dict>
 				<key>icon</key>
-				<string>GenericDocumentIcon</string>
+				<string>AdiumDefaultIcon</string>
 				<key>name</key>
 				<string>Adium Contact</string>
 			</dict>
